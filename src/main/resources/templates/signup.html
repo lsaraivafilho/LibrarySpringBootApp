@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Register</title>
+</head>
+
+<body>
+	<h1>Sign Up Form<h1>
+
+			<form th:action="@{/processRegistration}" method=POST th:object="${user}">
+				<div>
+					<label>First Name:</label>
+					<input type="text" name="fName" th:field="*{firstName}" minlength="2" , maxlength="20" required />
+				</div>
+
+				<div>
+					<label>Last Name:</label>
+					<input type="text" name="lName" th:field="*{lastName}" minlength="2" , maxlength="20" required />
+				</div>
+
+				<div>
+					<label>Username (email):</label>
+					<input type="email" name="username" th:field="*{emailAddress}" minlength="12" , maxlength="20"
+						required />
+				</div>
+
+				<div>
+					<label>Password:</label>
+					<input type="password" name="password" th:field="*{password}" minlength="6" , maxlength="12"
+						required />
+				</div>
+
+
+				<div>
+					<label>Phone Number:</label>
+					<input type=" tel" name="phone" placeholder="(999) 888-6666"
+						pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}" th:field="*{phone}" required />
+				</div>
+
+				<div>
+					<button type="submit">Sign Up</button>
+				</div>
+</body>
+
+</html>
