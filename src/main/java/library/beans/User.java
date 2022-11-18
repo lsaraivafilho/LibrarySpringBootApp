@@ -42,7 +42,7 @@ public class User {
 	/**
 	 * This is the nondefault constructor that auto-generates the ID for each user
 	 * and sets the rest of his/her attributes.
-	 * 
+	 * test
 	 * @param fName    - the user's first name
 	 * @param lName    - the user's last name
 	 * @param username - the user's username (email)
